@@ -28,6 +28,10 @@ public partial class MainWindow : Window
         new("WarLike PDF", "Outils PDF", "https://warlike-pdf.pages.dev/"),
         new("WarLike Crypte", "Coffre personnel", "https://warlike-crypte.pages.dev/"),
         new("WarLike Gaming", "Jeux et prototypes", "https://game-hub-v2.pages.dev/"),
+        new("WarLike Browser", "Navigateur pour ordinateur", "https://warlike-browser.pages.dev/"),
+        new("Extensions WarLike", "Catalogue d’extensions", "https://warlike-asset-stores.pages.dev/extensions.html"),
+        new("WarLike OSA", "Projet Android · GitHub", "https://github.com/Motherlode94/WarLike-OSA"),
+        new("WarLike OSW", "Projet Windows · GitHub", "https://github.com/Motherlode94/WarLike-OSW"),
         new("WarLike Android Hub", "Application Android", "https://warlike-android-hub.pages.dev/")
     };
     private readonly List<Entry> installed = new();
