@@ -1,0 +1,17 @@
+<Window x:Class="WarLikeOSW.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Title="WarLike OSW" Width="1180" Height="760" MinWidth="740" MinHeight="500" Background="#101422" Foreground="#F4F5FF" WindowStartupLocation="CenterScreen">
+ <Window.Resources>
+  <Style TargetType="Button"><Setter Property="Padding" Value="14,9"/><Setter Property="Margin" Value="0,0,8,8"/><Setter Property="Background" Value="#343B59"/><Setter Property="Foreground" Value="#FFFFFF"/><Setter Property="BorderThickness" Value="0"/><Setter Property="Cursor" Value="Hand"/></Style>
+  <Style TargetType="TextBox"><Setter Property="Padding" Value="12"/><Setter Property="Background" Value="#20273B"/><Setter Property="Foreground" Value="#FFFFFF"/><Setter Property="BorderBrush" Value="#46516F"/><Setter Property="CaretBrush" Value="White"/></Style>
+ </Window.Resources>
+ <Grid Margin="26">
+  <Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="Auto"/><RowDefinition Height="Auto"/><RowDefinition Height="*"/><RowDefinition Height="Auto"/></Grid.RowDefinitions>
+  <DockPanel><TextBlock Text="WARLIKE  /  OSW" FontSize="19" FontWeight="Bold" Foreground="#B8A5FF"/><TextBlock x:Name="Clock" DockPanel.Dock="Right" HorizontalAlignment="Right" Foreground="#ACB8D2" FontSize="15"/></DockPanel>
+  <StackPanel Grid.Row="1" Margin="0,30,0,18"><TextBlock Text="Ton espace WarLike" FontSize="36" FontWeight="Bold"/><TextBlock Text="Tes services et applications Windows, réunis au même endroit." Foreground="#ACB8D2" FontSize="15"/></StackPanel>
+  <Grid Grid.Row="2" Margin="0,0,0,20"><Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions><TextBox x:Name="Search" TextChanged="SearchChanged" ToolTip="Rechercher un service ou une application"/><Button Grid.Column="1" Margin="10,0,0,0" Content="Actualiser les applications" Click="RefreshApps"/></Grid>
+  <Grid Grid.Row="3"><Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="16"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions>
+   <DockPanel><TextBlock DockPanel.Dock="Top" Text="SERVICES WARLIKE" FontWeight="Bold" Foreground="#79DFD0" Margin="0,0,0,10"/><ListBox x:Name="Services" Background="#1A2032" Foreground="White" BorderThickness="0" MouseDoubleClick="OpenService"><ListBox.ItemTemplate><DataTemplate><StackPanel Margin="10"><TextBlock Text="{Binding Name}" FontWeight="Bold" FontSize="16"/><TextBlock Text="{Binding Description}" Foreground="#ACB8D2" TextWrapping="Wrap" Margin="0,4,0,0"/></StackPanel></DataTemplate></ListBox.ItemTemplate></ListBox></DockPanel>
+   <DockPanel Grid.Column="2"><TextBlock DockPanel.Dock="Top" Text="APPLICATIONS WINDOWS" FontWeight="Bold" Foreground="#79DFD0" Margin="0,0,0,10"/><ListBox x:Name="Installed" Background="#1A2032" Foreground="White" BorderThickness="0" DisplayMemberPath="Name" MouseDoubleClick="OpenInstalled" Padding="10"/></DockPanel>
+  </Grid>
+  <TextBlock Grid.Row="4" Margin="0,16,0,0" TextWrapping="Wrap" Foreground="#ACB8D2" Text="Double-clique sur un élément pour l’ouvrir. OSW est une application Windows et ne remplace pas Windows."/>
+ </Grid>
+</Window>
